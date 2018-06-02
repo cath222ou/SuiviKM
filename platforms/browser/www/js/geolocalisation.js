@@ -26,7 +26,6 @@ function geolocationSuccess(position) {
     points.push(coord);
     featureToUpdate.getGeometry().setCoordinates(points);
 
-    //featureToUpdate.getGeometry().setCoordinates([coord[0],coord[1]]);
     map.getView().setCenter(ol.proj.transform([lon, lat], 'EPSG:4326', 'EPSG:3857'));
     map.getView().setZoom(16);
 }

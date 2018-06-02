@@ -14,26 +14,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="104" column="59" lean-forward="false" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
+            <state relative-caret-position="600">
+              <caret line="96" column="25" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#4545#4552#1" expanded="true" />
+                <element signature="e#5453#5460#1" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="geolocalisation.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/geolocalisation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -41,8 +31,18 @@
       <file leaf-file-name="gestionApp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gestionApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state relative-caret-position="34">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geolocalisation.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/geolocalisation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,7 +51,7 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
+            <state relative-caret-position="2601">
               <caret line="153" column="17" lean-forward="false" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
               <folding />
             </state>
@@ -61,7 +61,7 @@
       <file leaf-file-name="initMap.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/initMap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="646">
               <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="47" />
               <folding />
             </state>
@@ -88,9 +88,9 @@
       <list>
         <option value="$PROJECT_DIR$/js/initMap.js" />
         <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/js/geolocalisation.js" />
         <option value="$PROJECT_DIR$/js/gestionApp.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/geolocalisation.js" />
       </list>
     </option>
   </component>
@@ -184,16 +184,16 @@
       <workItem from="1527859785517" duration="5613000" />
       <workItem from="1527868021367" duration="2427000" />
       <workItem from="1527872548207" duration="6039000" />
-      <workItem from="1527947744716" duration="6111000" />
+      <workItem from="1527947744716" duration="6143000" />
+      <workItem from="1527954570058" duration="2187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32398000" />
+    <option name="totallyTimeSpent" value="34617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -246,12 +246,56 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="104" column="59" lean-forward="false" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5453#5460#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gestionApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2601">
+          <caret line="153" column="17" lean-forward="false" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/initMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/geolocalisation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="69" column="100" lean-forward="false" selection-start-line="69" selection-start-column="100" selection-end-line="69" selection-end-column="100" />
           <folding>
             <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4545#4552#1" expanded="true" />
+            <element signature="e#5453#5460#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -295,7 +339,7 @@
           <folding>
             <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4545#4552#1" expanded="true" />
+            <element signature="e#5453#5460#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -339,7 +383,7 @@
           <folding>
             <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4545#4552#1" expanded="true" />
+            <element signature="e#5453#5460#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -375,7 +419,7 @@
           <folding>
             <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4545#4552#1" expanded="true" />
+            <element signature="e#5453#5460#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -411,7 +455,7 @@
           <folding>
             <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4545#4552#1" expanded="true" />
+            <element signature="e#5453#5460#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -447,7 +491,7 @@
           <folding>
             <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4545#4552#1" expanded="true" />
+            <element signature="e#5453#5460#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -483,7 +527,7 @@
           <folding>
             <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4545#4552#1" expanded="true" />
+            <element signature="e#5453#5460#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -519,7 +563,7 @@
           <folding>
             <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4545#4552#1" expanded="true" />
+            <element signature="e#5453#5460#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -555,7 +599,7 @@
           <folding>
             <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4545#4552#1" expanded="true" />
+            <element signature="e#5453#5460#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -607,35 +651,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
+        <state relative-caret-position="2601">
           <caret line="153" column="17" lean-forward="false" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="104" column="59" lean-forward="false" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4545#4552#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/gestionApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/initMap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="646">
           <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="47" />
           <folding />
         </state>
@@ -643,9 +667,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/geolocalisation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        <state relative-caret-position="240">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gestionApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="96" column="25" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#button#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5453#5460#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
