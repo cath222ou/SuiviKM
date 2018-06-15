@@ -27,7 +27,7 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
+    /*background-color:#E4E4E4;
     background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
@@ -37,7 +37,8 @@ body {
         left bottom,
         color-stop(0, #A7A7A7),
         color-stop(0.51, #E4E4E4)
-    );
+    );*/
+    background-color: whitesmoke;
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
@@ -142,16 +143,33 @@ hr{
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     font-size: large !important;
 }
 
 .bouton2{
-    padding-top: 30%;
+    padding-top: 10%;
     display: block;
     margin-top: 2px;
     margin-left:2px;
     margin-bottom:2px;
+}
+
+.boutonGPS{
+    width: 130px;
+    position: fixed !important;
+    margin-top: 2px !important;
+    margin-left:5px !important;
+    margin-bottom:2px !important;
+}
+
+.boutonCalcul {
+    margin-top: 20px !important;
+    height: 40px;
+    width: 300px;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 
@@ -173,4 +191,53 @@ hr{
 .col-sm{
     padding-right: 0px !important;
     padding-left: 0px !important;
+}
+
+input[type=text]{
+    width: 95%;
+    border-width: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ui-autocomplete .ui-menu-item
+{ font-size:small;}
+
+.separation {
+    width: 100%;
+    height: 20px;
+    border-bottom: 2px solid #067f5d;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.separtionTxt{
+    font-size: 20px;
+    background-color: white;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+h3{
+    text-align: center;
+}
+
+
+
+.ui-button{
+    background-color:#067f5d !important;
+    border-color: #04513c !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+textarea{
+    border-width: 2px;
+    width: 95% !important;
+}
+
+
+.modal-body{
+    margin-left: 10px !important;
 }

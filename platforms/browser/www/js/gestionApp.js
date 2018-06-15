@@ -15,7 +15,7 @@ $('#suiviBtn').click(function(){
     initmap();
 });
 
-$('#retour1').click(function(){
+$('#retourAcceuilSuivi').click(function(){
     $('#accueil').removeClass('hidden');
     $('#suivi').addClass('hidden');
     supprimerParcours();
@@ -27,7 +27,35 @@ $('#calculBtn').click(function(){
     $('#accueil').addClass('hidden');
 });
 
-$('#retour2').click(function(){
+$('#retourAccueilCalcul').click(function(){
     $('#accueil').removeClass('hidden');
     $('#calcul').addClass('hidden');
 });
+
+$('#infoBtn').click(function(){
+    $('#info').removeClass('hidden');
+    $('#accueil').addClass('hidden');
+});
+
+$('#retourAccueilTable').click(function(){
+    $('#accueil').removeClass('hidden');
+    $('#info').addClass('hidden');
+});
+
+
+
+//Affichage date et heure dans formulaire
+var myVar = setInterval(function () {
+    myTimer()
+},5000);
+
+function myTimer() {
+    var today = new Date();
+    var h = today.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+    var j = today.toLocaleDateString();
+    var date = today.getFullYear()+'-'+("0" + (today.getMonth() + 1)).slice(-2)+'-'+today.getDate();
+    var dateControl = document.querySelector('input[type="date"]');
+    dateControl.value = date;
+    console.log(date)
+
+}

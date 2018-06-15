@@ -56,7 +56,7 @@ $('#gpsFin').click(function(){
     var featureToUpdate = features[0];
     var longueur = featureToUpdate.getGeometry().getLength()/1000;
     var longueurArr = longueur.toFixed(2)
-    $('#distance').text("Vous avez parcouru: " +longueurArr+ "km")
+    $('#distance').text(longueurArr+ "km")
 
     map.getView().fit(featureToUpdate.getGeometry(), map.getSize())
 });

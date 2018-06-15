@@ -45,6 +45,7 @@
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
 
     <title>Kilométrage</title>
@@ -59,60 +60,115 @@
             <hr/>
         </div>
         <div class="bouton2">
-            <button id="suiviBtn" class="bouton ui-button ui-widget ui-corner-all">Suivi</button>
+            <button id="suiviBtn" class="bouton ui-button ui-widget ui-corner-all">Suivi GPS</button>
             <button id="calculBtn" class="bouton ui-button ui-widget ui-corner-all">Calcul kilométrage</button>
+            <button id="infoBtn" class="bouton ui-button ui-widget ui-corner-all">Mes déplacements</button>
         </div>
     </div>
 
     <div id="suivi">
-        <button id="retour1" class="bouton2 ui-button ui-widget ui-corner-all"><i class="fa fa-arrow-left fa-2x"></i></button>
+        <button id="retourAcceuilSuivi" class="bouton2 ui-button ui-widget ui-corner-all"><i class="fa fa-arrow-left fa-2x"></i></button>
         <div id="map"></div>
-        <button id="gps" class="bouton2 ui-button ui-widget ui-corner-all"><i class="fa fa-map-marker fa-2x" style=" vertical-align: middle;"></i> Départ</button>
-        <button id="gpsFin" class="bouton2 ui-button ui-widget ui-corner-all hidden" data-toggle="modal" data-target="#modalDistance"><i class="fa fa-ban fa-2x" style=" vertical-align: middle;"></i> Arrivée</button>
+
+        <button id="gps" class="boutonGPS ui-button ui-widget ui-corner-all">
+            <i class="fa fa-map-marker fa-2x" style=" vertical-align: middle;"></i>
+            Départ
+        </button>
+
+        <button id="gpsFin" class="boutonGPS ui-button ui-widget ui-corner-all hidden" data-toggle="modal" data-target="#modalDistance">
+            <i class="fa fa-ban fa-2x" style=" vertical-align: middle;"></i>
+            Arrivée
+        </button>
     </div>
 
 
     <div id="calcul" class="hidden">
-        <button id="retour2" class="bouton2 ui-button ui-widget ui-corner-all"><i class="fa fa-arrow-left fa-2x"></i></button>
-        <div id="accordion">
+        <button id="retourAccueilCalcul" class="bouton2 ui-button ui-widget ui-corner-all"><i class="fas fa-arrow-left fa-2x"></i></button>
+        <!--<div id="accordion">-->
             <h3>Adresse civique</h3>
                 <div>
                     <h7>Adresse de départ:</h7>
                     <br/>
-                    <input type="text">
+                    <input id="adrDepart" type="text">
+                    <div id="error" class="hidden"></div>
                     <br/>
                     <br/>
                     <h7>Adresse d'arrivée:</h7>
                     <br/>
-                    <input type="text">
+                    <input id="adrArrivee" type="text">
+                    <br/>
+                    <button onclick="calculateAndDisplayRoute()" class="boutonCalcul ui-button ui-widget ui-corner-all"><i class="fas fa-ruler fa-lg"></i> &nbsp Calcul distance</button>
                 </div>
+            <div class="separation">
+                <span class="separtionTxt">
+                    OU <!--Padding is optional-->
+                </span>
+            </div>
+
             <h3>Odomètre</h3>
                 <div>
                     <h7>Valeur d'odomètre au départ:</h7>
                     <br/>
-                    <input type="text">
+                    <input id="odoDepart" type="text">
                     <br/>
                     <br/>
                     <h7>Valeur d'odomètre à l'arrivé:</h7>
                     <br/>
-                    <input type="text">
+                    <input id="odoArrivee" type="text">
+                    <br/>
+                    <button onclick="calculOdometre()" class="boutonCalcul ui-button ui-widget ui-corner-all"><i class="fas fa-calculator fa-lg"></i> &nbsp Calcul distance</button>
                 </div>
+      <!--  </div>-->
+    </div>
+
+    <div id="info" class="hidden">
+        <button id="retourAccueilTable" class="bouton2 ui-button ui-widget ui-corner-all"><i class="fas fa-arrow-left fa-2x"></i></button>
+
+            <!-- <div style="text-align: center">
+                 <button name="btnDrop" onclick="dropTable()">Vider la base de données</button>
+             </div>-->
+            <section id="no-more-tables">
+                <div class="table">
+                    <table class="table-bordered table-striped cf" id="tbl">
+                        <thead class="cf">
+                        <tr>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
+
     </div>
 
     <div class="modal fade" id="modalDistance" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Distance parcourue</h5>
+                    <h6 class="modal-title" id="exampleModalLabel" style="font-weight: bold">Formulaire de déplacement</h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div id="distance" class="modal-body">
+                <div class="modal-body">
+                    <h7>Distance parcourue: </h7>
+                    <div id="distance"></div>
+                    <br/>
+                    <div>
+                        <h7>Date: </h7>
+                        <input id="date" type="date" value="">
+                    </div>
+                    <br/>
+                    <div>
+                    <h7>Commentaire:</h7>
+                        <textarea id="commentaireTxt" class="auto-text-area" name="commentaireTxt" style="width:100%;"></textarea><br />
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                    <button type="button" class="btn ui-button" onclick="">Enregistrer</button>
+                    <button type="button" class="btn ui-button" data-dismiss="modal">Annuler</button>
                 </div>
             </div>
         </div>
@@ -130,7 +186,10 @@
     <script type="text/javascript" src="js/initMap.js"></script>
     <script type="text/javascript" src="js/geolocalisation.js"></script>
     <script type="text/javascript" src="js/gestionApp.js"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDREUeezwnsDIf23c_5JWrn1VLQNypjmUs"></script>
+    <script type="text/javascript" src="js/geocodage.js"></script>
+    <script type="text/javascript" src="js/cheminPlusCourt.js"></script>
+    <script type="text/javascript" src="js/SQLite.js"></script>
 
 
 
