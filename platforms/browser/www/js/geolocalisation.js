@@ -5,7 +5,10 @@ var points = [];
 $('#gps').click(function(){
     watchId = navigator.geolocation.watchPosition(geolocationSuccess,
         onError,
-        {timeout: 5000});
+        {
+            timeout: 5000,
+            enableHighAccuracy: true
+        });
     $('#gps').addClass('hidden');
     $('#gpsFin').removeClass('hidden');
     points = [];
@@ -20,7 +23,9 @@ function geolocationSuccess(position) {
     //Position retourner par la fonction navigator.geolocation.watchPosition
     lat = position.coords.latitude;
     lon = position.coords.longitude;
-    console.log(lon, lat);
+
+    // if (position.coords.accuracy <= 10) {
+    // console.log(lon, lat);
 
     var coord = ol.proj.transform([lon, lat], 'EPSG:4326', 'EPSG:3857');
     points.push(coord);
@@ -28,6 +33,7 @@ function geolocationSuccess(position) {
 
     map.getView().setCenter(ol.proj.transform([lon, lat], 'EPSG:4326', 'EPSG:3857'));
     map.getView().setZoom(16);
+    // }
 }
 
 function supprimerParcours(){

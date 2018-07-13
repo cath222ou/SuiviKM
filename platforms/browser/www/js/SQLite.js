@@ -21,10 +21,10 @@ function afficherTableDeplacement(tx, results) {
     for (var i = 0; i < len; i++) {
         table01.append(
             '<tr>'
-            + '<td data-title="Identifiant" data-desc="constat_id">'+results.rows.item(i).deplacement_id +'</td>'
-            + '<td data-title="Date" data-desc="user_id" class="hidden">'+results.rows.item(i).date +'</td>'
-            + '<td data-title="Distance" data-desc="device_id" class="hidden">'+results.rows.item(i).distance +'</td>'
-            + '<td data-title="Commentaire" data-desc="a_nom" class="hidden">'+results.rows.item(i).commentaire +'</td>'+
+            // + '<td data-title="Identifiant" data-desc="constat_id" class="hidden">'+results.rows.item(i).deplacement_id +'</td>'
+            + '<td data-title="Date" data-desc="user_id">'+results.rows.item(i).date +'</td>'
+            + '<td data-title="Distance" data-desc="device_id">'+results.rows.item(i).distance +'</td>'
+            + '<td data-title="Commentaire" data-desc="a_nom">'+results.rows.item(i).commentaire +'</td>'+
             '</tr>'
         );
     }
@@ -45,3 +45,26 @@ function errorCB(something) {
     }
     console.log(something);
 }
+
+
+function insertDeplacement(){
+    var dist = $('#distance').text();
+    var date = $('#date').val();
+    var comment = $('#commentaireTxt').val();
+    db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    db.transaction(function(tx){
+        tx.executeSql('INSERT INTO deplacement (date, distance, commentaire) VALUES ("'+ date +'","'+ dist +'","'+ comment +'")', [], getDeplacement, errorCB);
+    }, errorCB);
+    $('#modalDistance').modal('hide');
+    $('#commentaireTxt').val('');
+}
+
+//Supprimer le contenu de la BD
+function dropTable(){
+    db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    db.transaction(function(tx){
+        tx.executeSql('DROP TABLE IF EXISTS deplacement',[],onDeviceReady, errorCB);
+    }, errorCB);
+    // $('.cf').empty();
+    //db.transaction(onDeviceReady, errorCB);
+};
